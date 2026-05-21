@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MarkRich - Clean Markdown to Rich Text</title>
+  <title>emmanueljet markrich - clean markdown to rich text</title>
   <!-- Tailwind CSS for modern aesthetics -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Inter Font -->
@@ -31,7 +31,7 @@
     }
 
     ::-webkit-scrollbar-track {
-      background: #f1f5f9;
+      background: #f7f8fa;
     }
 
     ::-webkit-scrollbar-thumb {
@@ -45,33 +45,33 @@
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col overflow-x-hidden">
+<body class="bg-white text-black min-h-screen flex flex-col overflow-x-hidden">
 
   <!-- Toast Notification Container -->
   <div id="toast-container" class="fixed top-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
   <!-- Main Navigation / Header -->
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 px-4 py-3 sm:px-6 shadow-sm">
+  <header class="bg-white border-b border-lavender sticky top-0 z-40 px-4 py-3 sm:px-6 shadow-sm">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <div class="bg-indigo-600 text-white p-2 rounded-xl shadow-md shadow-indigo-200">
+        <div class="bg-primary-600 text-white p-2 rounded-xl shadow-md shadow-primary-200">
           <i data-lucide="file-text" class="w-6 h-6"></i>
         </div>
         <div>
-          <h1 class="text-xl font-bold tracking-tight text-slate-900 flex items-center gap-2">
+          <h1 class="text-xl font-extrabold tracking-tight text-black flex items-center gap-2">
             MarkRich
             <span
-              class="text-xs font-normal bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full border border-indigo-200">
-              Clean Docs Ready
+              class="text-xs font-semibold bg-lavender text-primary px-2.5 py-0.5 rounded-full border border-primary/30">
+              emmanueljet
             </span>
           </h1>
-          <p class="text-xs text-slate-500">Pure, semantic rich-text copying without style-bloat</p>
+          <p class="text-xs text-graphite">Pure, semantic rich-text copying without style-bloat</p>
         </div>
       </div>
 
       <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
         <button id="btn-load-sample"
-          class="text-sm font-medium text-slate-600 hover:text-slate-900 px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center gap-1.5">
+          class="text-sm font-medium text-primary hover:text-primary px-5 py-1.5 rounded-lg border border-primary/30 hover:bg-lavender/30 transition flex items-center gap-1.5">
           <i data-lucide="sparkles" class="w-4 h-4"></i>
           Load Template
         </button>
@@ -88,53 +88,50 @@
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 py-6 sm:px-6 flex flex-col gap-6">
 
     <!-- Explanatory Banner -->
-    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 flex gap-3 text-emerald-800 shadow-sm">
-      <div class="text-emerald-600 shrink-0 mt-0.5">
-        <i data-lucide="check-circle" class="w-5 h-5"></i>
+    <div class="bg-lavender/30 border border-primary/20 rounded-xl p-4 flex gap-3 text-primary shadow-sm">
+      <div class="text-primary shrink-0 mt-0.5">
+        <i data-lucide="info" class="w-5 h-5"></i>
       </div>
-      <div class="text-sm">
-        <span class="font-semibold">How this works:</span> Standard Markdown editors copy inline styles (like fonts,
-        background colors, and alignments) which clutter Google Docs when pasted. <strong>MarkRich</strong> strips out
-        all custom styling attributes and outputs perfectly clean HTML tags (such as headings, bold tags, and list
-        tags). Google Docs will read these tags cleanly and apply your standard document theme without any formatting
-        override!
+      <div class="text-sm leading-relaxed">
+        <span class="font-semibold">How this works:</span> Standard Markdown editors copy inline styles,
+        such as fonts, colors, and rigid layout structures, which clutter destination canvases upon pasting.
+        <strong>MarkRich</strong> strips out custom styling parameters entirely and provides compliant, clean structural
+        elements. Target systems, including Google Docs and Microsoft Word, read this schema cleanly and automatically
+        adopt your default document theme rules.
       </div>
     </div>
 
     <!-- Template Modal Selector (Hidden by Default) -->
     <div id="template-modal"
-      class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm items-center justify-center z-50 hidden p-4">
+      class="fixed inset-0 bg-black/40 backdrop-blur-sm items-center justify-center z-50 hidden p-4">
       <div
-        class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-slate-200 transform scale-95 transition-all">
-        <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-3">
-          <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-            <i data-lucide="book-open" class="text-indigo-600"></i> Select Document Template
+        class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-lavender transform scale-95 transition-all">
+        <div class="flex items-center justify-between mb-4 border-b border-lavender pb-3">
+          <h3 class="text-lg font-bold text-black flex items-center gap-2">
+            <i data-lucide="book-open" class="text-primary"></i> Select Document Template
           </h3>
-          <button id="close-modal" class="text-slate-400 hover:text-slate-600">
+          <button id="close-modal" class="text-graphite hover:text-black">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
         <div class="space-y-3">
           <button
-            class="template-option w-full text-left p-3 border border-slate-200 rounded-xl hover:border-indigo-500 hover:bg-indigo-50/50 transition"
+            class="template-option w-full text-left p-3 border border-lavender hover:border-primary hover:bg-lavender/20 rounded-xl transition"
             data-template="meeting">
-            <h4 class="font-semibold text-slate-800">📅 Team Meeting Agenda & Notes</h4>
-            <p class="text-xs text-slate-500 mt-1">Structured layout for action items, discussion topics, and bullet
-              lists.</p>
+            <h4 class="font-bold text-primary">📅 Team Meeting Agenda & Notes</h4>
+            <p class="text-xs text-graphite mt-1">Structured layout for action items, discussion topics, and clear bullet points.</p>
           </button>
           <button
-            class="template-option w-full text-left p-3 border border-slate-200 rounded-xl hover:border-indigo-500 hover:bg-indigo-50/50 transition"
+            class="template-option w-full text-left p-3 border border-lavender hover:border-primary hover:bg-lavender/20 rounded-xl transition"
             data-template="resume">
-            <h4 class="font-semibold text-slate-800">💼 Clean Resume/CV Structure</h4>
-            <p class="text-xs text-slate-500 mt-1">Clean subheaders, bullet points, and clean bold alignments for work
-              experience.</p>
+            <h4 class="font-bold text-primary">💼 Clean Resume/CV Structure</h4>
+            <p class="text-xs text-graphite mt-1">Polished subheaders, bullet points, and clean bold alignments for work experience.</p>
           </button>
           <button
-            class="template-option w-full text-left p-3 border border-slate-200 rounded-xl hover:border-indigo-500 hover:bg-indigo-50/50 transition"
+            class="template-option w-full text-left p-3 border border-lavender hover:border-primary hover:bg-lavender/20 rounded-xl transition"
             data-template="specification">
-            <h4 class="font-semibold text-slate-800">📐 Product Specification</h4>
-            <p class="text-xs text-slate-500 mt-1">Comprehensive document containing inline tables, code samples,
-              blockquotes, and headers.</p>
+            <h4 class="font-bold text-primary">📐 Product Specification</h4>
+            <p class="text-xs text-graphite mt-1">Comprehensive document containing inline tables, code samples, blockquotes, and headers.</p>
           </button>
         </div>
       </div>
@@ -144,72 +141,75 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch flex-1">
 
       <!-- LEFT COLUMN: Markdown Input Workspace -->
-      <div class="flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden h-[680px]">
+      <div class="flex flex-col bg-white rounded-2xl shadow-sm border border-lavender overflow-hidden h-[680px]">
 
         <!-- Editor Toolbar -->
         <div
-          class="bg-slate-50 border-b border-slate-200 px-4 py-2 flex flex-wrap items-center justify-between gap-2 select-none">
+          class="bg-white/50 border-b border-lavender px-4 py-2 flex flex-wrap items-center justify-between gap-2 select-none">
           <div class="flex items-center flex-wrap gap-1">
             <!-- Format Buttons -->
             <button onclick="insertMarkdown('**', '**')"
-              class="p-1.5 text-slate-600 hover:bg-slate-200 hover:text-slate-900 rounded-lg transition"
+              class="p-1.5 text-graphite hover:bg-lavender/40 hover:text-primary rounded-lg transition"
               title="Bold (Ctrl+B)">
               <i data-lucide="bold" class="w-4 h-4"></i>
             </button>
             <button onclick="insertMarkdown('*', '*')"
-              class="p-1.5 text-slate-600 hover:bg-slate-200 hover:text-slate-900 rounded-lg transition"
+              class="p-1.5 text-graphite hover:bg-lavender/40 hover:text-primary rounded-lg transition"
               title="Italic (Ctrl+I)">
               <i data-lucide="italic" class="w-4 h-4"></i>
             </button>
             <button onclick="insertMarkdown('~~', '~~')"
-              class="p-1.5 text-slate-600 hover:bg-slate-200 hover:text-slate-900 rounded-lg transition"
+              class="p-1.5 text-graphite hover:bg-lavender/40 hover:text-primary rounded-lg transition"
               title="Strikethrough">
               <i data-lucide="strikethrough" class="w-4 h-4"></i>
             </button>
 
-            <div class="h-4 w-[1px] bg-slate-300 mx-1"></div>
+            <div class="h-4 w-[1px] bg-primary/30 mx-1"></div>
 
             <!-- Block Elements -->
             <button onclick="insertHeader()"
-              class="p-1.5 text-slate-600 hover:bg-slate-200 hover:text-slate-900 rounded-lg transition"
+              class="p-1.5 text-graphite hover:bg-lavender/40 hover:text-primary rounded-lg transition"
               title="Heading (Ctrl+H)">
               <span class="font-extrabold text-xs">H#</span>
             </button>
             <button onclick="insertMarkdown('> ', '')"
-              class="p-1.5 text-slate-600 hover:bg-slate-200 hover:text-slate-900 rounded-lg transition" title="Quote">
+              class="p-1.5 text-graphite hover:bg-lavender/40 hover:text-primary rounded-lg transition"
+              title="Quote">
               <i data-lucide="quote" class="w-4 h-4"></i>
             </button>
             <button onclick="insertMarkdown('`', '`')"
-              class="p-1.5 text-slate-600 hover:bg-slate-200 hover:text-slate-900 rounded-lg transition"
+              class="p-1.5 text-graphite hover:bg-lavender/40 hover:text-primary rounded-lg transition"
               title="Inline Code">
               <i data-lucide="code" class="w-4 h-4"></i>
             </button>
 
-            <div class="h-4 w-[1px] bg-slate-300 mx-1"></div>
+            <div class="h-4 w-[1px] bg-primary/30 mx-1"></div>
 
             <!-- List Buttons -->
             <button onclick="insertMarkdown('- ', '')"
-              class="p-1.5 text-slate-600 hover:bg-slate-200 hover:text-slate-900 rounded-lg transition"
+              class="p-1.5 text-graphite hover:bg-lavender/40 hover:text-primary rounded-lg transition"
               title="Bullet List">
               <i data-lucide="list" class="w-4 h-4"></i>
             </button>
             <button onclick="insertMarkdown('1. ', '')"
-              class="p-1.5 text-slate-600 hover:bg-slate-200 hover:text-slate-900 rounded-lg transition"
+              class="p-1.5 text-graphite hover:bg-lavender/40 hover:text-primary rounded-lg transition"
               title="Numbered List">
               <i data-lucide="list-ordered" class="w-4 h-4"></i>
             </button>
             <button onclick="insertTable()"
-              class="p-1.5 text-slate-600 hover:bg-slate-200 hover:text-slate-900 rounded-lg transition" title="Table">
+              class="p-1.5 text-graphite hover:bg-lavender/40 hover:text-primary rounded-lg transition"
+              title="Table">
               <i data-lucide="table" class="w-4 h-4"></i>
             </button>
             <button onclick="insertMarkdown('[Link Text](', 'https://example.com)')"
-              class="p-1.5 text-slate-600 hover:bg-slate-200 hover:text-slate-900 rounded-lg transition" title="Link">
+              class="p-1.5 text-graphite hover:bg-lavender/40 hover:text-primary rounded-lg transition"
+              title="Link">
               <i data-lucide="link" class="w-4 h-4"></i>
             </button>
           </div>
 
           <div
-            class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md border border-indigo-100 flex items-center gap-1">
+            class="text-xs font-semibold text-primary bg-lavender px-2.5 py-1 rounded-md border border-primary/20 flex items-center gap-1">
             <i data-lucide="edit-3" class="w-3.5 h-3.5"></i> MD Editor
           </div>
         </div>
@@ -218,12 +218,12 @@
         <div class="flex-1 flex overflow-hidden relative">
           <!-- Line Numbers -->
           <div id="line-counter"
-            class="w-12 bg-slate-50 border-r border-slate-100 py-4 text-right pr-3 text-slate-300 code-font text-sm select-none overflow-hidden h-full">
+            class="w-12 bg-white/40 border-r border-lavender py-4 text-right pr-3 text-primary code-font text-sm select-none overflow-hidden h-full">
             <div>1</div>
           </div>
           <!-- Actual Textarea -->
           <textarea id="markdown-input"
-            class="flex-1 resize-none border-none outline-none focus:ring-0 p-4 code-font text-sm text-slate-800 leading-relaxed overflow-y-auto"
+            class="flex-1 resize-none border-none outline-none focus:ring-0 p-4 code-font text-sm text-black leading-relaxed overflow-y-auto"
             placeholder="Write or paste your Markdown here...
 
 Use standard markup like:
@@ -242,30 +242,30 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
 
         <!-- Editor Footer Metadata -->
         <div
-          class="bg-slate-50 border-t border-slate-100 px-4 py-2.5 flex items-center justify-between text-xs text-slate-500">
+          class="bg-white/40 border-t border-lavender px-4 py-2.5 flex items-center justify-between text-xs text-graphite">
           <div class="flex items-center gap-4">
-            <span id="stat-words"><strong class="text-slate-700">0</strong> words</span>
-            <span id="stat-chars"><strong class="text-slate-700">0</strong> chars</span>
-            <span id="stat-time"><strong class="text-slate-700">0</strong> min read</span>
+            <span id="stat-words"><strong class="text-black">0</strong> words</span>
+            <span id="stat-chars"><strong class="text-black">0</strong> characters</span>
+            <span id="stat-time"><strong class="text-black">0</strong> min read</span>
           </div>
-          <div>
+          <div class="font-semibold text-primary">
             Markdown Input
           </div>
         </div>
       </div>
 
       <!-- RIGHT COLUMN: Rendered View & Clipboard Actions -->
-      <div class="flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden h-[680px]">
+      <div class="flex flex-col bg-white rounded-2xl shadow-sm border border-lavender overflow-hidden h-[680px]">
 
         <!-- Preview Tabs & Header -->
-        <div class="bg-slate-50 border-b border-slate-200 px-4 py-2 flex items-center justify-between">
-          <div class="flex bg-slate-200/60 p-1 rounded-xl">
+        <div class="bg-white/50 border-b border-lavender px-4 py-2 flex items-center justify-between">
+          <div class="flex bg-lavender/50 p-1 rounded-xl border border-primary/10">
             <button id="tab-visual"
-              class="tab-btn px-4 py-1.5 text-xs font-medium rounded-lg bg-white text-slate-800 shadow-sm transition">
+              class="tab-btn px-4 py-1.5 text-xs font-bold rounded-lg bg-white text-primary shadow-sm transition">
               Visual Preview
             </button>
             <button id="tab-html"
-              class="tab-btn px-4 py-1.5 text-xs font-medium rounded-lg text-slate-600 hover:text-slate-900 transition">
+              class="tab-btn px-4 py-1.5 text-xs font-bold rounded-lg text-graphite hover:text-primary transition">
               Clean HTML Preview
             </button>
           </div>
@@ -275,10 +275,10 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
         <div class="flex-1 overflow-y-auto p-6 relative bg-white">
 
           <!-- Tab Content: Visual Styled Preview -->
-          <div id="content-visual" class="prose max-w-none text-slate-800 space-y-4">
+          <div id="content-visual" class="prose max-w-none text-black space-y-4">
             <!-- Dynamic output loaded here -->
-            <div class="text-slate-400 text-center py-20">
-              <i data-lucide="eye" class="w-12 h-12 mx-auto mb-3 opacity-40 text-slate-500"></i>
+            <div class="text-graphite text-center py-20">
+              <i data-lucide="eye" class="w-12 h-12 mx-auto mb-3 opacity-40 text-primary"></i>
               <p class="text-sm">Type some markdown to see the live rendering...</p>
             </div>
           </div>
@@ -286,10 +286,9 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
           <!-- Tab Content: Pure Clean HTML Source View -->
           <div id="content-html" class="hidden h-full">
             <div class="h-full flex flex-col gap-2">
-              <p class="text-xs text-slate-500 mb-2">This is the exact, simplified markup parsed for Google Docs
-                copying. Notice there are <strong>no classes, no styling variables, and no backgrounds
-                  injected</strong>.</p>
-              <pre class="flex-1 p-4 bg-slate-900 text-slate-200 rounded-xl overflow-auto text-xs code-font select-all"
+              <p class="text-xs text-graphite mb-2">This is the exact, simplified markup parsed for copying. Notice there are <strong>no classes, no styling variables, and no backgrounds injected</strong>.</p>
+              <pre
+                class="flex-1 p-4 bg-black text-lavender rounded-xl overflow-auto text-xs code-font select-all border border-primary/20"
                 id="html-source"><code>&lt;!-- Clean output empty --&gt;</code></pre>
             </div>
           </div>
@@ -297,39 +296,39 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
 
         <!-- Action Bar (Rich Text Copy Button & Extra Formats) -->
         <div
-          class="bg-slate-50 border-t border-slate-200 p-4 flex flex-col sm:flex-row gap-3 items-center justify-between">
-          <div class="text-xs text-slate-500 text-center sm:text-left">
-            <p class="font-medium text-slate-700">Optimized for:</p>
-            <p>Google Docs, Word, Outlook & Notion</p>
+          class="bg-white/50 border-t border-lavender p-4 flex flex-col sm:flex-row gap-3 items-center justify-between">
+          <div class="text-xs text-graphite text-center sm:text-left">
+            <p class="font-bold text-primary">Optimized for:</p>
+            <p>Google Docs, Word, Outlook, & Notion</p>
           </div>
 
           <div class="flex flex-wrap gap-2 w-full sm:w-auto justify-end">
             <div class="relative group">
               <button id="btn-export-options"
-                class="px-3.5 py-3 bg-slate-200 text-slate-700 hover:bg-slate-300 font-semibold rounded-xl text-sm transition flex items-center justify-center gap-1.5">
+                class="px-3.5 py-3 bg-lavender text-primary hover:bg-primary/30 font-bold rounded-xl text-sm transition flex items-center justify-center gap-1.5">
                 <i data-lucide="download" class="w-4 h-4"></i>
               </button>
               <!-- Dropdown options -->
               <div
-                class="hidden absolute bottom-14 right-0 bg-white border border-slate-200 shadow-xl rounded-xl p-2 w-48 text-left group-hover:block hover:block z-10 flex flex-col gap-1">
+                class="hidden absolute bottom-14 right-0 bg-white border border-lavender shadow-xl rounded-xl p-2 w-48 text-left group-hover:block hover:block z-10 flex flex-col gap-1">
                 <button onclick="downloadAsFile('md')"
-                  class="w-full text-left px-3 py-2 text-xs font-medium text-slate-700 hover:bg-slate-100 rounded-lg flex items-center gap-2">
-                  <i data-lucide="file-down" class="w-3.5 h-3.5 text-indigo-500"></i> Download as .MD
+                  class="w-full text-left px-3 py-2 text-xs font-semibold text-graphite hover:bg-lavender/30 rounded-lg flex items-center gap-2">
+                  <i data-lucide="file-down" class="w-3.5 h-3.5 text-primary"></i> Download as .MD
                 </button>
                 <button onclick="downloadAsFile('html')"
-                  class="w-full text-left px-3 py-2 text-xs font-medium text-slate-700 hover:bg-slate-100 rounded-lg flex items-center gap-2">
-                  <i data-lucide="file-code" class="w-3.5 h-3.5 text-emerald-500"></i> Download Clean HTML
+                  class="w-full text-left px-3 py-2 text-xs font-semibold text-graphite hover:bg-lavender/30 rounded-lg flex items-center gap-2">
+                  <i data-lucide="file-code" class="w-3.5 h-3.5 text-primary"></i> Download Clean HTML
                 </button>
                 <button onclick="copyToClipboard('markdown')"
-                  class="w-full text-left px-3 py-2 text-xs font-medium text-slate-700 hover:bg-slate-100 rounded-lg flex items-center gap-2">
-                  <i data-lucide="copy" class="w-3.5 h-3.5 text-purple-500"></i> Copy Raw Markdown
+                  class="w-full text-left px-3 py-2 text-xs font-semibold text-graphite hover:bg-lavender/30 rounded-lg flex items-center gap-2">
+                  <i data-lucide="copy" class="w-3.5 h-3.5 text-secondary"></i> Copy Raw Markdown
                 </button>
               </div>
             </div>
 
             <!-- Main Primary Action: Copy Rich Text -->
             <button id="btn-copy-rich"
-              class="flex-1 sm:flex-none px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl text-sm shadow-md hover:shadow-lg hover:shadow-indigo-100 active:scale-95 transition flex items-center justify-center gap-2">
+              class="flex-1 sm:flex-none px-6 py-3 bg-gradient-to-br from-primary to-secondary hover:opacity-95 text-white font-bold rounded-xl text-sm shadow-md shadow-primary/25 active:scale-95 transition flex items-center justify-center gap-2">
               <i data-lucide="clipboard-copy" class="w-4 h-4"></i>
               Copy Rich Text
             </button>
@@ -340,36 +339,34 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
     </div>
 
     <!-- Paste Sandbox Section -->
-    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6 items-start">
+    <div class="bg-white rounded-2xl p-6 border border-lavender shadow-sm flex flex-col md:flex-row gap-6 items-start">
       <div class="flex-1">
-        <h3 class="text-base font-bold text-slate-900 flex items-center gap-2 mb-2">
-          <i data-lucide="shield-check" class="text-indigo-600 w-5 h-5"></i>
+        <h3 class="text-base font-semibold text-black flex items-center gap-2 mb-2">
+          <i data-lucide="shield-check" class="text-primary w-5 h-5"></i>
           Sandbox Paste-Test Area
         </h3>
-        <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+        <p class="text-sm text-graphite mb-4 leading-relaxed">
           Test your clipboard format here! After clicking <span
-            class="bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded font-semibold text-xs border border-indigo-100">Copy
+            class="bg-lavender text-primary px-1.5 py-0.5 rounded font-bold text-xs border border-primary/20">Copy
             Rich Text</span>, click inside the box on the right and paste (<kbd
-            class="px-1 py-0.5 bg-slate-100 border rounded text-xs">Ctrl+V</kbd> or <kbd
-            class="px-1 py-0.5 bg-slate-100 border rounded text-xs">Cmd+V</kbd>).
-          You'll see it pastes instantly using your system/browser's clean default text styling without bringing in any
-          styling artifacts or weird backgrounds.
+            class="px-1 py-0.5 bg-white border rounded text-xs">Ctrl+V</kbd> or <kbd
+            class="px-1 py-0.5 bg-white border rounded text-xs">Cmd+V</kbd>).
+          You'll see it pastes instantly using your system/browser's clean default text styling without bringing in any styling artifacts or weird backgrounds.
         </p>
-        <div class="flex gap-2 text-xs text-slate-500 bg-slate-50 p-3 rounded-lg border border-slate-100">
-          <i data-lucide="info" class="w-4 h-4 shrink-0 text-amber-500 mt-0.5"></i>
-          <span>If it pastes beautifully here using the box's default font setting, it will paste with native Google
-            Docs font settings.</span>
+        <div class="flex gap-2 text-xs text-primary bg-lavender/30 p-3 rounded-lg border border-primary/20">
+          <i data-lucide="info" class="w-4 h-4 shrink-0 text-primary mt-0.5"></i>
+          <span>If it pastes beautifully here using the box's default font setting, it will paste with native Google Docs font settings.</span>
         </div>
       </div>
 
       <div class="w-full md:w-[450px] shrink-0">
         <div id="paste-box" contenteditable="true"
-          class="w-full min-h-[140px] max-h-[220px] overflow-y-auto p-4 bg-slate-50 border border-dashed border-slate-300 rounded-xl outline-none focus:border-indigo-500 focus:bg-indigo-50/20 text-slate-700 text-sm transition"
+          class="w-full min-h-[140px] max-h-[220px] overflow-y-auto p-4 bg-white border border-dashed border-primary rounded-xl outline-none focus:border-primary focus:bg-lavender/10 text-black text-sm transition"
           placeholder="Click here and Paste to test..."></div>
         <div class="flex justify-between items-center mt-2">
-          <span class="text-xs text-slate-400">Pastes formatted rich text directly</span>
+          <span class="text-xs text-graphite">Pastes formatted rich text directly</span>
           <button id="btn-clear-sandbox"
-            class="text-xs font-semibold text-slate-500 hover:text-rose-600 transition flex items-center gap-1">
+            class="text-xs font-bold text-graphite hover:text-rose-600 transition flex items-center gap-1">
             <i data-lucide="eraser" class="w-3.5 h-3.5"></i> Clear sandbox
           </button>
         </div>
@@ -379,7 +376,7 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
   </main>
 
   <!-- App Footer -->
-  <footer class="bg-white border-t border-slate-200 mt-auto py-4 px-4 text-center text-xs text-slate-400">
+  <footer class="bg-white border-t border-lavender mt-auto py-4 px-4 text-center text-xs text-graphite">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <span>MarkRich Built for Professional Formatting Compatibility</span>
       <span>All actions run completely client-side in your browser.</span>
@@ -392,8 +389,8 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
     #content-visual h1 {
       font-size: 1.6em;
       font-weight: 800;
-      color: #0f172a;
-      border-bottom: 2px solid #f1f5f9;
+      color: #1A1E23;
+      border-bottom: 2px solid #E6E6FA;
       padding-bottom: 0.3em;
       margin-top: 1.2em;
       margin-bottom: 0.6em;
@@ -402,7 +399,7 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
     #content-visual h2 {
       font-size: 1.35em;
       font-weight: 700;
-      color: #1e293b;
+      color: #4A4A4A;
       margin-top: 1em;
       margin-bottom: 0.5em;
     }
@@ -410,7 +407,7 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
     #content-visual h3 {
       font-size: 1.15em;
       font-weight: 600;
-      color: #334155;
+      color: #4A4A4A;
       margin-top: 0.8em;
       margin-bottom: 0.4em;
     }
@@ -418,7 +415,7 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
     #content-visual p {
       line-height: 1.6;
       margin-bottom: 1em;
-      color: #334155;
+      color: #4A4A4A;
     }
 
     #content-visual ul,
@@ -440,12 +437,12 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
     }
 
     #content-visual blockquote {
-      border-left: 4px solid #6366f1;
+      border-left: 4px solid #1A1E23;
       padding-left: 1em;
-      color: #475569;
+      color: #4A4A4A;
       font-style: italic;
       margin: 1.2em 0;
-      background-color: #f8fafc;
+      background-color: #E6E6FA;
       padding-top: 0.5em;
       padding-bottom: 0.5em;
       border-radius: 0 8px 8px 0;
@@ -458,28 +455,28 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
     }
 
     #content-visual th {
-      background-color: #f1f5f9;
-      color: #0f172a;
+      background-color: #1A1E23;
+      color: #F7F8FA;
       font-weight: 600;
       text-align: left;
       padding: 8px 12px;
-      border: 1px solid #cbd5e1;
+      border: 1px solid #F7F8FA;
     }
 
     #content-visual td {
       padding: 8px 12px;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #E6E6FA;
     }
 
     #content-visual a {
-      color: #4f46e5;
+      color: #8B15BA;
       text-decoration: underline;
       font-weight: 500;
     }
 
     #content-visual pre {
-      background-color: #0f172a;
-      color: #f8fafc;
+      background-color: #1A1E23;
+      color: #F7F8FA;
       padding: 12px;
       border-radius: 8px;
       overflow-x: auto;
@@ -489,10 +486,10 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
     #content-visual code {
       font-family: 'Fira Code', monospace;
       font-size: 0.9em;
-      background-color: #f1f5f9;
+      background-color: #E6E6FA;
       padding: 2px 4px;
       border-radius: 4px;
-      color: #e11d48;
+      color: #1A1E23;
     }
 
     #content-visual pre code {
@@ -504,10 +501,104 @@ This is **bold** text, *italic* text, and a [Clean Link](https://google.com).
     /* Clean copy sandbox customization */
     #paste-box:empty::before {
       content: attr(placeholder);
-      color: #94a3b8;
+      color: #1A1E23;
     }
   </style>
 
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#8B15BA',
+              50: '#faf5fd',
+              100: '#f3e8fb',
+              200: '#e5ccf5',
+              300: '#d1a3ed',
+              400: '#b86de2',
+              500: '#9d3dd1',
+              600: '#8B15BA',
+              700: '#721098',
+              800: '#60117d',
+              900: '#511166',
+              950: '#340346',
+            },
+            secondary: {
+              DEFAULT: '#FCA311',
+              50: '#fff9eb',
+              100: '#fef1d6',
+              200: '#fde0a8',
+              300: '#fbca72',
+              400: '#faae3c',
+              500: '#FCA311',
+              600: '#df7c05',
+              700: '#b95a08',
+              800: '#95460e',
+              900: '#783a0f',
+              950: '#451c03',
+            },
+            graphite: {
+              DEFAULT: '#4A4A4A',
+              50: '#f6f6f6',
+              100: '#e7e7e7',
+              200: '#d1d1d1',
+              300: '#b0b0b0',
+              400: '#888888',
+              500: '#6d6d6d',
+              600: '#5d5d5d',
+              700: '#4A4A4A',
+              800: '#404040',
+              900: '#363636',
+              950: '#222222',
+            },
+            lavender: {
+              DEFAULT: '#E6E6FA',
+              50: '#fbfbfe',
+              100: '#f4f4fd',
+              200: '#E6E6FA',
+              300: '#cfcff4',
+              400: '#b1b1eb',
+              500: '#9090df',
+              600: '#7272cf',
+              700: '#5c5cba',
+              800: '#4c4c9b',
+              900: '#41417c',
+              950: '#262648',
+            },
+            white: {
+              DEFAULT: '#F7F8FA',
+              50: '#ffffff',
+              100: '#F7F8FA',
+              200: '#f0f2f5',
+              300: '#e4e8ee',
+              400: '#d3dbe3',
+              500: '#bcc7d4',
+              600: '#9eaec0',
+              700: '#8293a7',
+              800: '#6b7a8d',
+              900: '#5a6575',
+              950: '#3a414c',
+            },
+            black: {
+              DEFAULT: '#1A1E23',
+              50: '#f3f4f6',
+              100: '#e7e9ed',
+              200: '#c9ced6',
+              300: '#9fa8b6',
+              400: '#707d91',
+              500: '#536074',
+              600: '#424c5d',
+              700: '#353d4a',
+              800: '#2d333e',
+              900: '#262a33',
+              950: '#1A1E23',
+            },
+          }
+        }
+      }
+    }
+  </script>
   <script>
     // Preset templates
     const TEMPLATES = {
@@ -651,11 +742,11 @@ function sanitizeHtml(rawHtmlString) {
       toast.className = `flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-lg border text-sm font-medium transition-all duration-300 transform translate-y-2 opacity-0 pointer-events-auto`;
 
       if (type === 'success') {
-        toast.classList.add('bg-emerald-50', 'border-emerald-200', 'text-emerald-800');
-        toast.innerHTML = `<i data-lucide="check-circle-2" class="w-4.5 h-4.5 text-emerald-600"></i> ${message}`;
+        toast.classList.add('bg-lavender', 'border-primary/30', 'text-primary');
+        toast.innerHTML = `<i data-lucide="check-circle-2" class="w-4.5 h-4.5 text-primary"></i> ${message}`;
       } else if (type === 'info') {
-        toast.classList.add('bg-indigo-50', 'border-indigo-200', 'text-indigo-800');
-        toast.innerHTML = `<i data-lucide="info" class="w-4.5 h-4.5 text-indigo-600"></i> ${message}`;
+        toast.classList.add('bg-white', 'border-lavender', 'text-primary');
+        toast.innerHTML = `<i data-lucide="info" class="w-4.5 h-4.5 text-primary"></i> ${message}`;
       } else {
         toast.classList.add('bg-rose-50', 'border-rose-200', 'text-rose-800');
         toast.innerHTML = `<i data-lucide="alert-circle" class="w-4.5 h-4.5 text-rose-600"></i> ${message}`;
@@ -685,8 +776,8 @@ function sanitizeHtml(rawHtmlString) {
       // 1. Calculate and render previews
       if (rawMarkdown.trim() === '') {
         visualPreview.innerHTML = `
-                    <div class="text-slate-400 text-center py-20">
-                        <i data-lucide="eye" class="w-12 h-12 mx-auto mb-3 opacity-40 text-slate-500"></i>
+                    <div class="text-graphite text-center py-20">
+                        <i data-lucide="eye" class="w-12 h-12 mx-auto mb-3 opacity-40 text-primary"></i>
                         <p class="text-sm">Type some markdown to see the live rendering...</p>
                     </div>`;
         htmlSource.textContent = "<!-- Clean output empty -->";
@@ -715,9 +806,9 @@ function sanitizeHtml(rawHtmlString) {
     // Live stats calculations
     function updateMetrics(text) {
       if (!text) {
-        document.getElementById('stat-words').innerHTML = `<strong class="text-slate-700">0</strong> words`;
-        document.getElementById('stat-chars').innerHTML = `<strong class="text-slate-700">0</strong> chars`;
-        document.getElementById('stat-time').innerHTML = `<strong class="text-slate-700">0</strong> min read`;
+        document.getElementById('stat-words').innerHTML = `<strong class="text-black">0</strong> words`;
+        document.getElementById('stat-chars').innerHTML = `<strong class="text-black">0</strong> characters`;
+        document.getElementById('stat-time').innerHTML = `<strong class="text-black">0</strong> min read`;
         return;
       }
       const cleanText = text.trim();
@@ -725,9 +816,9 @@ function sanitizeHtml(rawHtmlString) {
       const chars = text.length;
       const readTime = Math.ceil(words / 200); // Average reading speed 200 wpm
 
-      document.getElementById('stat-words').innerHTML = `<strong class="text-slate-700">${words}</strong> words`;
-      document.getElementById('stat-chars').innerHTML = `<strong class="text-slate-700">${chars}</strong> chars`;
-      document.getElementById('stat-time').innerHTML = `<strong class="text-slate-700">${readTime}</strong> min read`;
+      document.getElementById('stat-words').innerHTML = `<strong class="text-black">${words}</strong> words`;
+      document.getElementById('stat-chars').innerHTML = `<strong class="text-black">${chars}</strong> characters`;
+      document.getElementById('stat-time').innerHTML = `<strong class="text-black">${readTime}</strong> min read`;
     }
 
     // Sync Line numbering with total lines in the input
@@ -931,6 +1022,7 @@ function sanitizeHtml(rawHtmlString) {
       handleEditorInput();
     }
 
+    // Insert Table Helper
     function insertTable() {
       const tableTemplate = `
 | Header 1 | Header 2 |
@@ -945,15 +1037,15 @@ function sanitizeHtml(rawHtmlString) {
     document.getElementById('tab-visual').addEventListener('click', () => {
       document.getElementById('content-visual').classList.remove('hidden');
       document.getElementById('content-html').classList.add('hidden');
-      document.getElementById('tab-visual').className = "tab-btn px-4 py-1.5 text-xs font-medium rounded-lg bg-white text-slate-800 shadow-sm transition";
-      document.getElementById('tab-html').className = "tab-btn px-4 py-1.5 text-xs font-medium rounded-lg text-slate-600 hover:text-slate-900 transition";
+      document.getElementById('tab-visual').className = "tab-btn px-4 py-1.5 text-xs font-medium rounded-lg bg-white text-primary shadow-sm transition";
+      document.getElementById('tab-html').className = "tab-btn px-4 py-1.5 text-xs font-bold rounded-lg text-graphite hover:text-primary transition";
     });
 
     document.getElementById('tab-html').addEventListener('click', () => {
       document.getElementById('content-html').classList.remove('hidden');
       document.getElementById('content-visual').classList.add('hidden');
-      document.getElementById('tab-html').className = "tab-btn px-4 py-1.5 text-xs font-medium rounded-lg bg-white text-slate-800 shadow-sm transition";
-      document.getElementById('tab-visual').className = "tab-btn px-4 py-1.5 text-xs font-medium rounded-lg text-slate-600 hover:text-slate-900 transition";
+      document.getElementById('tab-html').className = "tab-btn px-4 py-1.5 text-xs font-medium rounded-lg bg-white text-primary shadow-sm transition";
+      document.getElementById('tab-visual').className = "tab-btn px-4 py-1.5 text-xs font-medium rounded-lg text-graphite hover:text-primary transition";
     });
 
     // Event: Setup template actions
@@ -1046,7 +1138,7 @@ Here is an example structure ready for document reviews:
   - This nested item works natively as well.
 - **Bold text** and *italic phrases* carry formatting cleanly.
 
-> **Note on Safety:** Standard rich text copy engines often copy complex inline attributes (such as background colors, margins, or Google-incompatible tag attributes). MarkRich solves this by stripping absolute layout specs.
+> **Note on Styling:** Standard rich text copy engines often copy complex inline attributes, such as background colors, margins, or Google-incompatible tag attributes. MarkRich solves this by stripping absolute layout specs.
 `;
       handleEditorInput();
       lucide.createIcons();
