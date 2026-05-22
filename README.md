@@ -2,7 +2,7 @@
 
 [![Next.js Framework](https://img.shields.io/badge/Framework-NextJS?logo=next.js&label=Next.js&color=8b15ba)](https://nextjs.org)
 ![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)
-[![Build Status](https://github.com/emmanueljet-limited/emmanueljet-markrich/actions/workflows/github-pages.yml/badge.svg)](https://github.com/emmanueljet-limited/emmanueljet-markrich/actions/workflows/github-pages.yml)
+[![Build Status](https://github.com/emmanueljet-limited/emmanueljet-markrich/actions/workflows/nextjs.yml/badge.svg)](https://github.com/emmanueljet-limited/emmanueljet-markrich/actions/workflows/nextjs.yml)
 [![Preview](https://img.shields.io/website?down_color=red&down_message=Offiline&label=Preview&up_color=8b15ba&up_message=Online&url=https%3A%2F%2Fmarkrich.emmanueljet.com)](https://markrich.emmanueljet.com)
 
 **MarkRich** is a highly polished, single-page web utility engineered to parse Markdown into perfectly clean, semantic Rich Text. Copy and paste your documents directly into platforms like Google Docs, Microsoft Word, Outlook, or Notion without transferring unwanted background highlights, custom font definitions, or messy layout classes.
