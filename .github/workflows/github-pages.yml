@@ -33,7 +33,7 @@ jobs:
           echo "manager=npm" >> $GITHUB_OUTPUT
           echo "command=ci" >> $GITHUB_OUTPUT
           echo "runner=npx --no-install" >> $GITHUB_OUTPUT
-          exit 0it 1
+          exit 0
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
