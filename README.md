@@ -1,8 +1,13 @@
-# 📝 emmanueljet-markrich
+# emmanueljet-markrich
+
+[![Next.js Framework](https://img.shields.io/badge/Framework-NextJS?logo=next.js&label=Next.js&color=8b15ba)](https://nextjs.org)
+![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)
+[![Build Status](https://github.com/emmanueljet-limited/emmanueljet-markrich/actions/workflows/github-pages.yml/badge.svg)](https://github.com/emmanueljet-limited/emmanueljet-markrich/actions/workflows/github-pages.yml)
+[![Preview](https://img.shields.io/website?down_color=red&down_message=Offiline&label=Preview&up_color=8b15ba&up_message=Online&url=https%3A%2F%2Fmarkrich.emmanueljet.com)](https://markrich.emmanueljet.com)
 
 **MarkRich** is a highly polished, single-page web utility engineered to parse Markdown into perfectly clean, semantic Rich Text. Copy and paste your documents directly into platforms like Google Docs, Microsoft Word, Outlook, or Notion without transferring unwanted background highlights, custom font definitions, or messy layout classes.
 
-## 🚀 Key Features
+## Key Features
 
 * **Real-time Interactive Workspace**: A beautiful side-by-side editing configuration featuring custom responsive line numbering and responsive structural breakpoints.  
 * **Double-Guard Styling Protection**: Includes explicit transparent background wrapping styles inside the clipboard block to prevent browsers from introducing computed gray or white highlighting boxes.  
@@ -11,29 +16,39 @@
 * **Advanced Document Analytics**: Real-time insights tracking word count, character metrics, and estimated reading time intervals.  
 * **Multi-Format Export Actions**: Instant downloading protocols enabling offline saves as clean .md or pristine .html files.
 
-## 🛠️ Installation & Setup
+## Getting Started
 
-Because MarkRich is designed with a high-efficiency single-file architecture, deploying and running the project is exceptionally simple. There are no build scripts, heavy node packages, or complex runtime containers.
+### Prerequisites
 
-### Local Development
+* Node.js 22+
+* npm
 
-1. **Clone the Repository**:
+### Installation
+
+1. Clone the Repository:
 
    ```bash
    git clone https://github.com/emmanueljet-limited/emmanueljet-markrich.git 
    cd emmanueljet-markrich
    ```
 
-2. **Run Locally**:  
-   Open the index.html file directly in any modern browser of your choice.
+2. Install dependencies:
 
-   ```md
-   # On macOS or Windows
-   open index.html
-
-   # On Linux (Ubuntu/Debian)  
-   xdg-open index.html
+   ```bash
+   npm install
    ```
+
+3. Run the development server.
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## License
+
+This project is licensed under the **GNU Affero General Public License v3.0** - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing & Support**
 

@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #faf5fd;
+  --color-primary-100: #f3e8fb;
+  --color-primary-200: #e5ccf5;
+  --color-primary-300: #d1a3ed;
+  --color-primary-400: #b86de2;
+  --color-primary-500: #9d3dd1;
+  --color-primary-600: #8B15BA;
+  --color-primary-700: #721098;
+  --color-primary-800: #60117d;
+  --color-primary-900: #511166;
+  --color-primary-950: #340346;
+  --color-primary: #8B15BA;
+
+  --color-secondary-50: #fff9eb;
+  --color-secondary-100: #fef1d6;
+  --color-secondary-200: #fde0a8;
+  --color-secondary-300: #fbca72;
+  --color-secondary-400: #faae3c;
+  --color-secondary-500: #FCA311;
+  --color-secondary-600: #df7c05;
+  --color-secondary-700: #b95a08;
+  --color-secondary-800: #95460e;
+  --color-secondary-900: #783a0f;
+  --color-secondary-950: #451c03;
+  --color-secondary: #FCA311;
+
+  --color-graphite-50: #f6f6f6;
+  --color-graphite-100: #e7e7e7;
+  --color-graphite-200: #d1d1d1;
+  --color-graphite-300: #b0b0b0;
+  --color-graphite-400: #888888;
+  --color-graphite-500: #6d6d6d;
+  --color-graphite-600: #5d5d5d;
+  --color-graphite-700: #4A4A4A;
+  --color-graphite-800: #404040;
+  --color-graphite-900: #363636;
+  --color-graphite-950: #222222;
+  --color-graphite: #4A4A4A;
+
+  --color-lavender-50: #fbfbfe;
+  --color-lavender-100: #f4f4fd;
+  --color-lavender-200: #E6E6FA;
+  --color-lavender-300: #cfcff4;
+  --color-lavender-400: #b1b1eb;
+  --color-lavender-500: #9090df;
+  --color-lavender-600: #7272cf;
+  --color-lavender-700: #5c5cba;
+  --color-lavender-800: #4c4c9b;
+  --color-lavender-900: #41417c;
+  --color-lavender-950: #262648;
+  --color-lavender: #E6E6FA;
+
+  --color-white-50: #ffffff;
+  --color-white-100: #F7F8FA;
+  --color-white-200: #f0f2f5;
+  --color-white-300: #e4e8ee;
+  --color-white-400: #d3dbe3;
+  --color-white-500: #bcc7d4;
+  --color-white-600: #9eaec0;
+  --color-white-700: #8293a7;
+  --color-white-800: #6b7a8d;
+  --color-white-900: #5a6575;
+  --color-white-950: #3a414c;
+  --color-white: #F7F8FA;
+
+  --color-black-50: #f3f4f6;
+  --color-black-100: #e7e9ed;
+  --color-black-200: #c9ced6;
+  --color-black-300: #9fa8b6;
+  --color-black-400: #707d91;
+  --color-black-500: #536074;
+  --color-black-600: #424c5d;
+  --color-black-700: #353d4a;
+  --color-black-800: #2d333e;
+  --color-black-900: #262a33;
+  --color-black-950: #1A1E23;
+  --color-black: #1A1E23;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-fira-code), ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f8fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.code-font {
+  font-family: var(--font-mono);
+}
+
+/* Visual Render Styling */
+.visual-preview h1 {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: #1A1E23;
+  border-bottom: 2px solid #E6E6FA;
+  padding-bottom: 0.3em;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+.visual-preview h2 {
+  font-size: 1.35em;
+  font-weight: 700;
+  color: #4A4A4A;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.visual-preview h3 {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #4A4A4A;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+}
+
+.visual-preview p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+  color: #4A4A4A;
+}
+
+.visual-preview ul,
+.visual-preview ol {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.visual-preview ul {
+  list-style-type: disc;
+}
+
+.visual-preview ol {
+  list-style-type: decimal;
+}
+
+.visual-preview li {
+  margin-bottom: 0.3em;
+}
+
+.visual-preview blockquote {
+  border-left: 4px solid #1A1E23;
+  padding-left: 1em;
+  color: #4A4A4A;
+  font-style: italic;
+  margin: 1.2em 0;
+  background-color: #E6E6FA;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-radius: 0 8px 8px 0;
+}
+
+.visual-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+}
+
+.visual-preview th {
+  background-color: #1A1E23;
+  color: #F7F8FA;
+  font-weight: 600;
+  text-align: left;
+  padding: 8px 12px;
+  border: 1px solid #F7F8FA;
+}
+
+.visual-preview td {
+  padding: 8px 12px;
+  border: 1px solid #E6E6FA;
+}
+
+.visual-preview a {
+  color: #8B15BA;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.visual-preview pre {
+  background-color: #1A1E23;
+  color: #F7F8FA;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.visual-preview code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background-color: #E6E6FA;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #1A1E23;
+}
+
+.visual-preview pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* Clean copy sandbox customization */
+.paste-box:empty::before {
+  content: attr(data-placeholder);
+  color: #1A1E23;
+}

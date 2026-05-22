@@ -1,0 +1,66 @@
+{
+  "name": "emmanueljet-markrich",
+  "version": "1.0.0",
+  "license": "AGPL-3.0",
+  "description": "A highly polished, single-page web utility engineered to parse Markdown into perfectly clean, semantic Rich Text.",
+  "author": "Emmanuel Joseph <dev@emmanueljet.com> (https://emmanueljet.com)",
+  "homepage": "https://markrich.emmanueljet.com",
+  "keywords": [
+    "emmanueljet",
+    "web utility",
+    "github-pages",
+    "antigravity",
+    "converter",
+    "rich text",
+    "markdown",
+    "nextjs",
+    "react",
+    "pwa"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emmanueljet-limited/emmanueljet-markrich.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emmanueljet-limited/emmanueljet-markrich/issues/new?title=[Bug]%20TITLE_HERE&body=**Describe%20the%20bug%3A**%0A%0A**Steps%20to%20reproduce%3A**%0A%0A**Expected%20behavior%3A**%0A%0A**Screenshots%20(if%20applicable)%3A**%0A%0A**Additional%20context%3A**%0A%0A&labels=bug&assignees=emmanuelJet",
+    "email": "dev@emmanueljet.com"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "lucide-react": "^1.16.0",
+    "marked": "^18.0.4",
+    "next": "^16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/marked": "^5.0.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "husky": "^9.1.7",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
